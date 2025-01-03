@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JourneyHeaven</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            padding: 60px 10%;
+            background-color: #f5f5f5;
+            margin-top: 80px;
+        }
+
+        .section-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgb(0, 33, 71);
+            margin-bottom: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .about-intro h1 {
+            font-size: 45px;
+            font-weight: bold;
+            color: #002147;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .about-intro p {
+            font-size: 20px;
+            color: #595959;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .vision-mission {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 70px;
+            flex-wrap: wrap;
+        }
+
+        .vision,
+        .mission {
+            width: 48%;
+            padding: 30px;
+            text-align: center;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .vision h2,
+        .mission h2 {
+            font-size: 32px;
+            color: #002147;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision h2::after,
+        .mission h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #002147;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .vision h2:hover::after,
+        .mission h2:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .vision p,
+        .mission p {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+        }
+
+        .values {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .values h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #002147;
+            margin-bottom: 20px;
+        }
+
+        .values .value {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .values .value:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .values .value i {
+            font-size: 50px;
+            color: #002147;
+            margin-bottom: 15px;
+        }
+
+        .values .value h3 {
+            font-size: 24px;
+            color: #002147;
+            margin-bottom: 15px;
+        }
+
+        .values .value p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        @media (max-width: 1024px) {
+
+            .vision,
+            .mission {
+                width: 48%;
+            }
+
+            .value {
+                width: 48%;
+            }
+
+            .about-intro h1 {
+                font-size: 40px;
+            }
+
+            .vision h2,
+            .mission h2 {
+                font-size: 26px;
+            }
+
+            .vision p,
+            .mission p {
+                font-size: 16px;
+            }
+
+            .value i {
+                font-size: 45px;
+            }
+
+            .value h3 {
+                font-size: 18px;
+            }
+
+            .value p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .vision,
+            .mission {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .value {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .about-intro h1 {
+                font-size: 36px;
+            }
+
+            .vision h2,
+            .mission h2 {
+                font-size: 22px;
+            }
+
+            .vision p,
+            .mission p {
+                font-size: 14px;
+            }
+
+            .value i {
+                font-size: 40px;
+            }
+
+            .value h3 {
+                font-size: 16px;
+            }
+
+            .value p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-intro h1 {
+                font-size: 28px;
+            }
+
+            .vision h2,
+            .mission h2 {
+                font-size: 20px;
+            }
+
+            .vision p,
+            .mission p {
+                font-size: 12px;
+            }
+
+            .value i {
+                font-size: 35px;
+            }
+
+            .value h3 {
+                font-size: 14px;
+            }
+
+            .value p {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <header>
+            <section id="header">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <h2 style="color: aliceblue; margin-left: 5%; font-family: 'Times New Roman', Times, serif;">
+                        JourneyHeaven</h2>
+                </div>
+                <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="about-intro section-box">
+                <h1>About Us</h1>
+                <p>We are dedicated to providing the best travel experiences to our customers, exploring the world with
+                    excitement and ease. Our team works tirelessly to curate the perfect travel itineraries for every
+                    type of traveler, whether you're seeking a luxurious getaway or an adventure of a lifetime.
+                    JourneyHeaven offers you not only vacations but an opportunity to explore the world's beauty and
+                    create memories that last forever.</p>
+                <p>With years of experience in the travel industry, we understand the diverse needs of our clients, and
+                    we ensure every journey is seamless, exciting, and memorable. Join us on a journey of discovery,
+                    relaxation, and exploration!</p>
+            </section>
+
+            <section class="vision-mission">
+                <div class="vision section-box">
+                    <h2>Our Vision</h2>
+                    <p>To be the world’s leading travel agency, known for our commitment to exceptional service and
+                        unforgettable travel experiences. Our vision is to provide travelers with not just a trip, but a
+                        story to share. We aim to be the go-to partner for exploring new horizons and discovering the
+                        hidden gems of the world.</p>
+                    <p>We believe in the power of travel to change lives, and our goal is to inspire others to explore
+                        new destinations, cultures, and adventures. By offering unparalleled expertise and a deep
+                        passion for travel, we aspire to help you see the world through a different lens.</p>
+                </div>
+                <div class="mission section-box">
+                    <h2>Our Mission</h2>
+                    <p>To offer personalized travel packages, create lasting memories, and ensure customer satisfaction
+                        at every step of the journey. We are dedicated to helping you discover new destinations,
+                        cultures, and experiences while making sure every moment of your trip is filled with joy,
+                        relaxation, and excitement.</p>
+                    <p>Our mission is to tailor every trip to your preferences, ensuring that you get the most out of
+                        your journey. Whether it’s an exotic destination or a peaceful retreat, we are committed to
+                        offering exceptional customer service and delivering an experience that exceeds expectations.
+                    </p>
+                </div>
+            </section>
+
+            <section class="values section-box">
+                <h2>Our Values</h2>
+                <div class="value">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Customer Centric</h3>
+                    <p>We put our customers at the heart of everything we do, ensuring a seamless and enjoyable
+                        experience. We listen to your needs and customize every trip to make sure it fits your personal
+                        preferences. Your satisfaction is our top priority, and we are dedicated to creating
+                        unforgettable moments for you.</p>
+                </div>
+                <div class="value">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Perspective</h3>
+                    <p>We embrace a global view and offer destinations that are diverse, exciting, and culturally rich.
+                        Our expertise spans across continents, offering a wide variety of travel experiences that cater
+                        to all kinds of adventurers. We help you discover the world, not just as a tourist, but as an
+                        explorer.</p>
+                </div>
+                <div class="value">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h3>Quality Service</h3>
+                    <p>We are committed to excellence, ensuring every aspect of your travel experience is handled with
+                        utmost care. From the moment you book your trip to the day you return, we focus on providing the
+                        best service possible, ensuring your journey is smooth and stress-free.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="JourneyHeaven Logo">
+                    <h2>JourneyHeaven</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: namita@gmail.com</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Address: 123 Travel Road, Kolhapur</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JourneyHeaven. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

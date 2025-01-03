@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JourneyHeaven</title>
+</head>
+
+<body>
+    <section id="container">
+        <header>
+            <section id="header">
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <h2 style="color: aliceblue; margin-left: 5%; font-family: 'Times New Roman', Times, serif;">
+                        JourneyHeaven</h2>
+                </div>
+                <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <div id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <div id="sliders">
+                <video src="videos/slider1.mp4" autoplay loop muted></video>
+                <h2 id="slidertext">Ready to start your exciting journey.</h2>
+                <div id="table-container">
+                    <table border="5" style="border-color: white;">
+                        <tr>
+                            <td>
+                                <select name="role">
+                                    <option disabled selected>All Destinations</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="pondicherry">Pondicherry</option>
+                                    <option value="manali">Manali</option>
+                                    <option value="Ooty">Ooty</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label for="dateFrom"></label>
+                                <input type="date" id="dateFrom" name="dateFrom" placeholder="Date from">
+                            </td>
+                            <td>
+                                <label for="dateTo"></label>
+                                <input type="date" id="dateTo" name="dateTo" placeholder="Date to">
+                            </td>
+                            <td>
+                                <label for="guest"></label>
+                                <input type="number" id="guest" name="guest" placeholder="Guests">
+                            </td>
+                            <td>
+                                <button type="submit">Search</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <section id="services">
+                <div class="services-title">
+                    <h1>We have the best services available for you!</h1>
+                </div>
+                <div class="servicesProvided">
+                    <i class="fas fa-plane"></i>
+                    <h2>Flight Service</h2>
+                    <h3 style="font-weight: normal; margin-top: 3%; color: rgba(61, 67, 71, 0.733);">Arrival and
+                        Departure</h3>
+                </div>
+                <div class="servicesProvided">
+                    <i class="fas fa-utensils"></i>
+                    <h2>Food Services</h2>
+                    <h3 style="font-weight: normal; margin-top: 3%; color: rgba(61, 67, 71, 0.733);">Catering</h3>
+                </div>
+                <div class="servicesProvided">
+                    <i class="fas fa-bus"></i>
+                    <h2>Travel Services</h2>
+                    <h3 style="font-weight: normal; margin-top: 3%; color: rgba(61, 67, 71, 0.733);">Pick-up/drop</h3>
+                </div>
+                <div class="servicesProvided">
+                    <i class="fas fa-hotel"></i>
+                    <h2>Hotel Services</h2>
+                    <h3 style="font-weight: normal; margin-top: 3%; color: rgba(61, 67, 71, 0.733);">Check-in/out</h3>
+                </div>
+            </section>
+
+            <section id="destinations">
+                <h1>Beautiful Destinations</h1>
+                <div class="destinationBox">
+                    <img src="images/dubai.jpg" alt="Destination">
+                    <h2>Dubai</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/kashmir.jpg" alt="Destination">
+                    <h2>Kashmir</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/france.jpg" alt="Destination">
+                    <h2>France</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/ooty.jpg" alt="Destination">
+                    <h2>Ooty</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/maldives.jpg" alt="Destination">
+                    <h2>Maldives</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/rajasthan.jpg" alt="Destination">
+                    <h2>Rajasthan</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/manali.jpg" alt="Destination">
+                    <h2>Manali</h2>
+                </div>
+                <div class="destinationBox">
+                    <img src="images/italy.jpg" alt="Destination">
+                    <h2>Italy</h2>
+                </div>
+            </section>
+
+            <section id="counter-section">
+                <div class="counter-box">
+                    <h2 class="counter" data-target="667">0</h2>
+                    <p><b>Completed Tours</b></p>
+                </div>
+                <div class="counter-box">
+                    <h2 class="counter" data-target="250">0</h2>
+                    <p><b> Clients</b></p>
+                </div>
+                <div class="counter-box">
+                    <h2 class="counter" data-target="80">0</h2>
+                    <p><b>Experienced Members</b></p>
+                </div>
+                <div class="counter-box">
+                    <h2 class="counter" data-target="32">0</h2>
+                    <p><b>Awards Won</b></p>
+                </div>
+            </section>
+
+            <section id="our-team">
+                <h1>Meet Our Team</h1>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="images/staff1.png" alt="Team Member 1">
+                        <h3>Namita K</h3>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/staff2.png" alt="Team Member 2">
+                        <h3>Kadhija S</h3>
+                        <p>Marketing Head</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/staff3.png" alt="Team Member 3">
+                        <h3>Pooja D</h3>
+                        <p>Operations Manager</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/staff4.png" alt="Team Member 4">
+                        <h3>Sneha S</h3>
+                        <p>Customer Relations</p>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="JourneyHeaven Logo">
+                    <h2>JourneyHeaven</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: namita@gmail.com</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Address: 123 Travel Road, Kolhapur</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JourneyHeaven. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </section>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".counter");
+
+            counters.forEach(counter => {
+                const updateCounter = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const count = +counter.innerText;
+
+                    const increment = target / 200; 
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCounter, 10); 
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
